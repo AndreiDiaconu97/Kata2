@@ -1,7 +1,3 @@
-// class Roman {
-
-// }
-
 let dct = {
 	0: "",
 	1: "I",
@@ -13,12 +9,18 @@ let dct = {
 	7: "VII",
 	9: "IX",
 	10: "X",
-	50: "L"
+	50: "L",
+	100: "C",
+	500: "D"
 }
 
 function convert(n) {
 	res = "";
-	while(n!= 0 && n%50 == 0) {
+	while(n>=100) {
+		res += dct[100];
+		n -= 100;
+	}	
+	while(n>=50) {
 		res += dct[50];
 		n -= 50;
 	}	
@@ -26,7 +28,6 @@ function convert(n) {
 		res += dct[10];
 		n -= 10;
 	}
-	console.log(res, n);
 	res += dct[n];
 
 	return res
@@ -41,7 +42,16 @@ function sum(addends) {
 
 }
 
+function diff(addends) {
+	let res = addends[0];
+	for (let i = 1; i < addends.length; i++) {
+		res -= addends[i];
+	}
+	return convert(res)
+}
+
 module.exports = {
 	convert,
-	sum
+	sum,
+	diff
 }
