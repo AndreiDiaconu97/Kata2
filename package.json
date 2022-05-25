@@ -1,0 +1,20 @@
+{
+  "name": "kata2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreiDiaconu97/Kata2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreiDiaconu97/Kata2/issues"
+  },
+  "homepage": "https://github.com/AndreiDiaconu97/Kata2#readme"
+}
