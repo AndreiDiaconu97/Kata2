@@ -26,6 +26,16 @@ function convert(n) {
 	}
 }
 
+function sum(addends) {
+	let res = "";
+	for (let i = 0; i < addends.length; i++) {
+		res += convert(addends[i]);
+	}
+
+	return res
+}
+
 module.exports = {
-	convert
+	convert,
+	sum
 }
