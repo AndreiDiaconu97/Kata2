@@ -21,6 +21,9 @@ function convert(n) {
 	if (n == 6) {
 		return "VI"
 	}
+	if (n == 4) {
+		return "IV"
+	}
 }
 
 module.exports = {

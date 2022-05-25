@@ -17,3 +17,6 @@ test('should convert 6 to VI', (t) => {
 	assert.strictEqual(convert(6), "VI");
 });
 
+test('should convert 4 to IV', (t) => {
+	assert.strictEqual(convert(4), "IV");
+});
