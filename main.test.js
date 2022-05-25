@@ -8,3 +8,12 @@ test('should convert 1,2,3 to I,II,III', (t) => {
 	assert.strictEqual(convert(3), "III");
 });
 
+test('should convert 5,10 to V,X', (t) => {
+	assert.strictEqual(convert(5), "V");
+	assert.strictEqual(convert(10), "X");
+});
+
+test('should convert 6 to VI', (t) => {
+	assert.strictEqual(convert(6), "VI");
+});
+
