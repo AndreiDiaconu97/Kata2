@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const {convert, sum, diff} = require('./main');
+const { convert, sum, diff } = require('./main');
 
 // test('', (t) => {
 // 	assert.strictEqual();
@@ -26,19 +26,29 @@ test('should convert 4 to IV', (t) => {
 });
 
 test('should sum 10+10+5+1 = XXVI', (t) => {
-	assert.strictEqual(sum([10,10,5,1]), "XXVI");
+	assert.strictEqual(sum([10, 10, 5, 1]), "XXVI");
 });
 
 test('should sum 39+11 = L', (t) => {
-	assert.strictEqual(sum([39,11]), "L");
+	assert.strictEqual(sum([39, 11]), "L");
 });
 
 test('should sum 4+3 = VII', (t) => {
-	assert.strictEqual(sum([4,3]), "VII");
+	assert.strictEqual(sum([4, 3]), "VII");
 });
 
 test('should difference 500-149 = CCCLI', (t) => {
-	assert.strictEqual(diff([500,149]), "CCCLI");
+	assert.strictEqual(diff([500, 149]), "CCCLI");
 });
+
+test('', (t) => {
+	let tmp = [1000, (1000 - 100), (50 - 10), (5 - 1)];
+	assert.strictEqual(sum(tmp), "MCMXLIV");
+});
+
+
+
+
+
 
 
