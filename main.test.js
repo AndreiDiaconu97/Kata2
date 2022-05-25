@@ -41,7 +41,7 @@ test('should difference 500-149 = CCCLI', (t) => {
 	assert.strictEqual(diff([500, 149]), "CCCLI");
 });
 
-test('', (t) => {
+test('should sum differences', (t) => {
 	let tmp = [1000, (1000 - 100), (50 - 10), (5 - 1)];
 	assert.strictEqual(sum(tmp), "MCMXLIV");
 });
