@@ -28,3 +28,11 @@ test('should convert 4 to IV', (t) => {
 test('should sum 10+10+5+1 = XXVI', (t) => {
 	assert.strictEqual(sum([10,10,5,1]), "XXVI");
 });
+
+test('should sum 39+11 = 50', (t) => {
+	assert.strictEqual(sum([39,11]), "L");
+});
+
+test('should sum 4+3 = 7', (t) => {
+	assert.strictEqual(sum([4,3]), "VII");
+});

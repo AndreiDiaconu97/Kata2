@@ -2,37 +2,43 @@
 
 // }
 
+let dct = {
+	0: "",
+	1: "I",
+	2: "II",
+	3: "III",
+	4: "IV",
+	5: "V",
+	6: "VI",
+	7: "VII",
+	9: "IX",
+	10: "X",
+	50: "L"
+}
+
 function convert(n) {
-	if (n == 1) {
-		return "I"
+	res = "";
+	while(n!= 0 && n%50 == 0) {
+		res += dct[50];
+		n -= 50;
+	}	
+	while(n>= 10) {
+		res += dct[10];
+		n -= 10;
 	}
-	if (n == 2) {
-		return "II"
-	}
-	if (n == 3) {
-		return "III"
-	}
-	if (n == 5) {
-		return "V"
-	}
-	if (n == 10) {
-		return "X"
-	}
-	if (n == 6) {
-		return "VI"
-	}
-	if (n == 4) {
-		return "IV"
-	}
+	console.log(res, n);
+	res += dct[n];
+
+	return res
 }
 
 function sum(addends) {
-	let res = "";
+	let res = 0;
 	for (let i = 0; i < addends.length; i++) {
-		res += convert(addends[i]);
+		res += addends[i];
 	}
+	return convert(res)
 
-	return res
 }
 
 module.exports = {
